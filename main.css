@@ -1,0 +1,15 @@
+body#ur-landing {
+    font-size: 16px;
+}
+
+.block {
+    padding: 20px 0 50px 0;
+}
+
+#ur-landing h2 {
+    margin-bottom: 20px;
+}
+
+#ur-landing h4 {
+    font-size: 24px;
+}
