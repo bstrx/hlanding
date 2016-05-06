@@ -108,3 +108,76 @@ h2 {
     font-weight: bold;
     font-size: 34px;
 }
+
+.main-row2 {
+    display: flex;
+}
+
+.main-row2_flash {
+    background-color: #42C0FB;
+    color: white;
+    box-shadow: inset  0  8px 8px -8px rgba(0,0,0,0.5),
+                inset  0 -8px 8px -8px rgba(0,0,0,0.5);
+    font-size: 34px;
+}
+
+.main-row__content {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px 20px;
+}
+
+.download-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    font-size: 40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+.quite:link, .quite:hover, .quite:visited, .quite:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.agreement {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 100%;
+    max-width: 870px;
+}
+
+.agreement__link {
+    display: inline-flex; /* Firefox required this for proper baseline align-items */
+}
+
+/* TODO remove */
+.stages, .situations {
+    height: 300px;
+    background-color: coral;
+}
+
+.stages {
+
+}
+
+.situations {
+
+}
+
+.tab {
+
+}
+
+.tab_collapsed {
+
+}
