@@ -211,12 +211,12 @@
                     <h2 class="reverse-call__header">Запрос обратного звонка</h2>
                     <p> После заполнения заявки, в течении нескольких часов с вами свяжется наш специалист и ответит на интересующие вас вопросы.</p>
                     <div class="form-panel">
-                        <form action="mailto:groundsale@yandex.ru" name="request" class="form-panel__action">
+                        <form method="POST" name="request" class="form-panel__action">
                             <div class="form-panel__fields">
-                                <input type="text" name="phone" placeholder="Укажите ваш телефон">
-                                <input type="text" name="name" placeholder="Укажите вашe имя">
+                                <input type="text" class="js-phone-input" name="phone" placeholder="Укажите ваш телефон">
+                                <input type="text" class="js-name-input" name="name" placeholder="Укажите вашe имя">
                                 <br>
-                                <button class="btn btn-action">Отправить!</button>
+                                <button class="btn btn-action js-reverse-call-button">Отправить!</button>
                             </div>
                         </form>
                         <div class="form-panel__success">
@@ -259,6 +259,35 @@
         <div class="footer-row text-center">
             <div class="footer-copyright">© Hedget, 2016</div>
         </div>
+
+        <script>
+            $submitButton = $('.js-reverse-call-button');
+            $submitButton.click(function(e) {
+                event.preventDefault();
+                that = this;
+
+                if (validate()) {
+                    var phone = $('.js-phone-input').val();
+                    var name = $('.js-name-input').val();
+
+                    $.ajax({
+                        method: "POST",
+                        url: "https://script.google.com/macros/s/AKfycbxfYK3QO0cb5Kso74KAd-biSj_W6Z4VtO7GNmGYX7YPI_uO_lol/exec",
+                        data: { name: name, phone: phone }
+                    }).done(function( msg ) {
+                        $submitButton.addClass('success');
+                        $submitButton.text('Запрос отправлен!');
+                        $submitButton.prop('disabled', true);
+                    });
+                }
+            });
+
+            function validate() {
+                return true;
+            }
+
+
+        </script>
 
         <!-- VK retargeting -->
         <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=Z9OXtzlhBQCVpOt*VDjCgjgpiwZYt1tLHw47OI4PaOymnbj477LLRmUvBqVz90x9hmBX/2TK7t5xyj*TD7S3zXjxNOBPs8xpeaAH8YTWL0gIRdQMMADtbUF4rqrs7gNCVeccbWadSSlm2w9lKZoO/ImJmvg*b/RarggeoI/mWKc-';</script>

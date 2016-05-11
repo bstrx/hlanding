@@ -302,6 +302,10 @@ a.btn {
     width: 200px;
 }
 
+.btn-action.success {
+    background: darkgreen;
+}
+
 .btn-action:hover {
     background: #0E9BEC;
 }
