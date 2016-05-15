@@ -76,7 +76,8 @@ h2 {
 }
 
 .b-main {
-    background: #ffffff url('img/main_top.jpg') no-repeat;
+    background: #ffffff url('img/main_top.jpg') center center no-repeat;
+    background-size: auto auto;
 }
 
 .included-image-block {
@@ -109,7 +110,7 @@ h2 {
 }
 
 .main-row2_background {
-    background: #fff url('img/main_bottom.jpg') no-repeat;
+    background: #fff url('img/main_bottom.jpg') center center no-repeat;
 }
 
 
